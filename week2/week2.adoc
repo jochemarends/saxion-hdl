@@ -13,7 +13,7 @@ include::self-test-ch3.vhd[]
 
 [qanda]
 Is this a structural, behavioral, or RTL description?::
-This is a RTL description cause the circuit is described in the input/output relationship of signals.
+This is a RTL description cause the circuit is described in the relationship between signals.
 
 What is the purpose of a generic?::
 The purpose of generics is to create flexible components.
@@ -22,21 +22,16 @@ What is the purpose of a configuration statement?::
 -
 
 In our tutorial there is an adder, is this a structural, behavioral, or RTL description?::
--
+The adder from the tutorial is defined using a RTL description.
+The behaviour is described in terms of relationships between signals.
 
-Draw the schematics of a full adder and make a structural VHDL description::
--
+Draw the schematics of a full adder and make a structural VHDL description:: +
+image::images/full-adder.png[]
 
 == Self Test Chapter 4
 
-[wavedrom,format=svg]
-....
-{ assign:[
-  ["b3", "g3"],
-  ["b2", ["^", "b3", "g2"]],
-  ["b1", ["^", "b2", "g1"]],
-  ["b0", ["^", "b1", "g0"]]
-]}
-....
+[source,vhdl]
+----
+include::../../../idev/hdl/week2/week2.vhd[]
+----
 
-[qanda]
