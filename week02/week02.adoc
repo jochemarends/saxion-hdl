@@ -37,14 +37,19 @@ In our tutorial there is an adder, is this a structural, behavioral, or RTL desc
 The adder from the tutorial uses a RTL description because the behaviour is described in terms of relationships between signals.
 
 Draw the schematics of a full adder and make a structural VHDL description::
-`TODO`
++
+image::images/full-adder.png[width=60%]
 
 == Exercises Chapter 3
 
 [qanda]
 Simulate in Quartus the behavioral VHDL of a 3-bit adder.::
-I have pasted an image of the simulation at the end of this document.
-
++
+[source,vhdl]
+----
+include::adder.vhd[]
+----
++
 Implement the 3-bit adder on the MAX 10 board.::
 I have no access to such board at the moment.
 
