@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+package traffic_light is
+    type light_state is (green, amber, red);
+
+    entity controller is
+        port (
+            clk: out std_logic;
+            car, pedestrian: out light_state
+        );
+    end controller;
+
+    architecture arch of controller is
+    begin
+        car <= green;
+    end arch;
+end traffic_light;
+

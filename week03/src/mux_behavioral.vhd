@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity mux_behavioral is
+    port (
+        input:   in  std_logic_vector(3 downto 0);
+        control: in  std_logic_vector(1 downto 0);
+        output:  out std_Logic
+    );
+end mux_behavioral;
+
+architecture arch of mux_behavioral is
+begin
+    process (input, control)
+    begin
+        case control is
+            when "00" => output <= input(0);
+            when "01" => output <= input(1);
+            when "10" => output <= input(2);
+            when "11" => output <= input(3);
+        end case;
+    end process;
+end arch;
+
