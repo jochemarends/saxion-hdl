@@ -14,7 +14,7 @@ signal segments : std_logic_vector(6 downto 0);
 begin
     process (data)
     begin
-        case digit is
+        case data is
             when "0000" => segments <= "1111110"; 
             when "0001" => segments <= "0110000"; 
             when "0010" => segments <= "1101101";
